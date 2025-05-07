@@ -33,6 +33,18 @@ const changeTodo = (id: number) => {
     );
 };
 
+const sortByTitle = () => {
+    const sortedTodos = [...todos].sort((a, b) => a.title.localeCompare(b.title, "sv", { sensitivity: 'base' })
+);
+    setTodos(sortedTodos);
+
+}
+
+const sortByCompleted = () => {
+    const sortedTodos = [...todos].sort((b, a) => Number(a.completed) - Number(b.completed));
+    setTodos(sortedTodos);
+}
+
 
   return (
     <>
@@ -50,9 +62,15 @@ const changeTodo = (id: number) => {
           <span className="text-lg"  >{todo.title} </span> 
           </div>
 
-        <button className="bg-blue-400 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-40 hover:shadow-lg" onClick = {() => removeTodo(todo.id)} > Ta bort Todo</button>
+        <button className="bg-red-400 hover:bg-red-600 text-white font-bold py-2 px-4 rounded w-40 hover:shadow-lg" onClick = {() => removeTodo(todo.id)} > Ta bort Todo</button>
         </li>
       ))}
+
+      <div className="flex items-center justify-center gap-4 mt-6 yt-10">
+        <button className="bg-blue-400 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-40 hover:shadow-lg" onClick={sortByTitle}>Sortera</button>
+        <button className="bg-blue-400 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-40 hover:shadow-lg" onClick={sortByCompleted}>Klara</button>
+        </div>
+    
     </ul>
     </section>
 
