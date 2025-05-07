@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Todo } from "../models/model";
+import { Form } from "./Form";
 
 export const TodoList = () => {
   const [todos, setTodos] = useState<Todo[]> ([
@@ -8,6 +9,9 @@ export const TodoList = () => {
     { id: 3, title: 'Koda', completed: false },
   ]);
 
+  const addTodo = (todo: Todo) => {
+    setTodos([...todos, todo]);
+  };
   
 // ta bort
 
@@ -32,19 +36,25 @@ const changeTodo = (id: number) => {
 
   return (
     <>
-    <ul>
+    <section>
+     <Form onAddTodo={addTodo} />
+    <ul className="w-205 mx-auto py-20">
       {todos.map(todo => (
-        <li key={todo.id}>
+        <li className="flex items-center justify-between gap-4 mb-6 border-b pb-4" key={todo.id}>
+            <div className="flex items-center gap-3 flex-1">
           <input type="checkbox" 
           checked={todo.completed} 
           onChange={() => changeTodo(todo.id)}
+          
           />
-          {todo.title}
+          <span className="text-lg"  >{todo.title} </span> 
+          </div>
 
-        <button onClick = {() => removeTodo(todo.id)}> Ta bort Todo</button>
+        <button className="bg-blue-400 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-40 hover:shadow-lg" onClick = {() => removeTodo(todo.id)} > Ta bort Todo</button>
         </li>
       ))}
     </ul>
+    </section>
 
     </>
   );
