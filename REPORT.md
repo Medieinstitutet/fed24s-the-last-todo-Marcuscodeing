@@ -51,7 +51,7 @@ för att köra projektet.
 
 
 ## 🏆 **Betyg: VG**
-📌 **Motivering:** Koden uppfyller alla G-kraven och de flesta av VG-kraven. Den har implementerat en hårdkodad lista, en funktion som tar bort en todo, en möjlighet att visa och ändra statusen för klara händelser, ett formulär för att skapa nya todos, och sorteringsfunktioner för todo-listan. Dessutom har Tailwind CSS implementerats för styling och sidan använder sig av en React-baserad struktur.
+📌 **Motivering:** Koden uppfyller alla krav för betyget VG. Den innehåller en hårdkodad lista, tillåter användaren att markera todos som klara/oklara och därmed hantera visningen och själva listan korrekt. Formuläret möjliggör skapandet av nya todos, och det finns funktioner för att sortera både efter titel och efter om de är klara. Den använder även Tailwind CSS som ett grafiskt ramverk. Koden har bra struktur och layout är konsistent.
 
 💡 **Förbättringsförslag:**  
-Det finns väldigt små kodkvalitetsproblem som kan förbättras. Till exempel så kan `htmlFor` i etiketten för inputen göras mer konsekvent genom att använda camelCase, även om det fungerar som det är. Dessutom kan användningen av Tailwind SEO-koder konsolideras för att undvika repetitioner, och några smärre formateringsjusteringar kan tillämpas för bättre läsbarhet. Ett annat område att överväga vore att lägga till mer validering och användarvänlighet, såsom felmeddelanden för ogiltiga inmatningar i formuläret.
+För att ytterligare förbättra koden kan användarupplevelsen optimeras genom att lägga till meddelanden eller visuella indikatorer när uppgifter läggs till, ändras eller tas bort. Dessutom, skulle prestanda kunna förbättras genom att använda useCallback eller useMemo för att undvika onödig rendering av komponenter vid tillståndsförändringar.
