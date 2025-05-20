@@ -51,7 +51,7 @@ för att köra projektet.
 
 
 ## 🏆 **Betyg: VG**
-📌 **Motivering:** Koden uppfyller alla krav för betyget VG. Den innehåller en hårdkodad lista, tillåter användaren att markera todos som klara/oklara och därmed hantera visningen och själva listan korrekt. Formuläret möjliggör skapandet av nya todos, och det finns funktioner för att sortera både efter titel och efter om de är klara. Den använder även Tailwind CSS som ett grafiskt ramverk. Koden har bra struktur och layout är konsistent.
+📌 **Motivering:** Koden uppfyller alla krav för betyget VG. Den har en hårdkodad lista och tillåter användaren att lägga till nya todos, visa både klara och oklara uppgifter, samt återställa klara uppgifter. Den använder Tailwind CSS för styling och har en välfungerande UI-design. Koden är generellt välstrukturerad och alla funktionaliteter fungerar som avsett.
 
 💡 **Förbättringsförslag:**  
-För att ytterligare förbättra koden kan användarupplevelsen optimeras genom att lägga till meddelanden eller visuella indikatorer när uppgifter läggs till, ändras eller tas bort. Dessutom, skulle prestanda kunna förbättras genom att använda useCallback eller useMemo för att undvika onödig rendering av komponenter vid tillståndsförändringar.
+Även om projektet uppfyller kraven, finns det alltid utrymme för förbättringar. Ett område att överväga är att optimera lagring av todos i localStorage så att det sker endast efter relevanta ändringar och inte på varje render-loop. Ett annat område kan vara att förbättra CSS-strukturen genom att utnyttja mer av Tailwind för att öka kodens DRY (Don't Repeat Yourself) praktik och undvika repetitiva definitioner. Dessa förbättringar kan göra koden mer effektiv och lättare att underhålla.
